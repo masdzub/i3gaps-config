@@ -172,8 +172,8 @@ bindsym $mod+Return workspace $tag2; exec urxvt
 #shortcut thunar
 bindsym $mod+Shift+t exec thunar
 
-#whatsapp
-bindsym $mod+Shift+w workspace $tag10; exec /opt/WhatsApp/WhatsApp
+#slack
+bindsym $mod+Shift+s workspace $tag10; exec slack
 
 #google chrome
 bindsym $mod+Shift+g workspace $tag1; exec google-chrome
@@ -244,7 +244,7 @@ bindsym $mod+Shift+0 move container to workspace $tag10
 # automatically start programs in specific workspaces on login
 exec --no-startup-id i3-msg "workspace $tag1; exec google-chrome"
 exec --no-startup-id i3-msg "workspace $tag2; exec urxvt"
-exec --no-startup-id i3-msg "workspace $tag10; exec /opt/WhatsApp/WhatsApp"
+exec --no-startup-id i3-msg "workspace $tag10; exec slack"
 
 # assign some applications to certain workspaces
 # assign [class="Firefox"] $tag1

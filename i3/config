@@ -210,7 +210,7 @@ set $tag6  "6: six"
 set $tag7  "7: seven"
 set $tag8  "8: eight"
 set $tag9  "9: nine"
-set $tag10 "10: Whatsapp"
+set $tag10 "10: Slack"
 
 # switch to workspace
 bindsym $mod+1 workspace $tag1

@@ -44,6 +44,9 @@ for_window [class="^.*"] border pixel 3
 # set desktop background
 exec_always feh --bg-fill /home/dzub/Pictures/wallpaper.png
 
+# enable dunst
+exec_always --no-startup-id dunst -conf .config/dunstrc/dunstrc
+
 # shadows and transitions with compton
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 
@@ -318,7 +321,7 @@ hide_edge_borders both
 
 # LOCK, SUSPEND KEYBINDS
 
-bindsym Shift+$mod+Return exec --no-startup-id i3lock-fancy -t "Call Your Fucking Administrator" 
+bindsym Shift+$mod+Return exec --no-startup-id i3lock-fancy -t "Call Your Administrator Please" 
 bindsym Control+$mod+s exec --no-startup-id i3lock-fancy -t "Call Your Fucking Administrator" && systemctl suspend
 
 

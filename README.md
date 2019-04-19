@@ -6,3 +6,5 @@ please install i3gaps, font awesome, hack font, feh, scrot, light, amixer, i3loc
 for terminal, change to fish.
 
 and please install rofi to alternative dmenu 
+
+if you want gesture install libinputgesture 

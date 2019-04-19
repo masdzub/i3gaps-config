@@ -8,3 +8,5 @@ for terminal, change to fish.
 and please install rofi to alternative dmenu 
 
 if you want gesture install libinputgesture 
+
+you can use flameshoot or scrot to screenshoot

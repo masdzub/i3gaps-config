@@ -1,12 +1,42 @@
 
 # i3gaps-config
 
-please install i3gaps, font awesome, hack font, feh, scrot, light, amixer, i3lock, i3lock-fancy, dmenu, thunar, arandr, lxapperearance.
+please install 
 
-for terminal, change to fish.
+gesture 	: libinputgesture 
 
-and please install rofi to alternative dmenu 
+Screenshoot 	: flameshoot or scrot
 
-if you want gesture install libinputgesture 
+font 		: hack font, awesome, 
 
-you can use flameshoot or scrot to screenshoot
+background 	: feh
+
+dim screen 	: light
+
+volume 		: amixer / alsa-utils / pulseaudio-utils 
+
+notification 	: dunst
+
+menu 		: dmenu & rofi
+
+file manager 	: thunar
+
+monitor changer : arandr
+
+apperearance 	: lxapperearance
+
+browser 	: chrome & firefox
+
+lock 		: i3lock-fancy
+
+communication 	: slack
+
+terminal	: rxvt-unicode
+
+animation	: compton
+
+network manager	: nm-applet
+
+bluetooth 	: blueberry
+
+mod		: Mod4 (wind*ws button)

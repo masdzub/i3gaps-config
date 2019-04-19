@@ -39,13 +39,16 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 client.background       $bg-color
 
 # pixel borders remove title bars completely because of compton shadows
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 # set desktop background
 exec_always feh --bg-fill /home/dzub/Pictures/wallpaper.png
 
 # enable dunst
 exec_always --no-startup-id dunst -conf .config/dunstrc/dunstrc
+
+#enable flameshoot (screenshoot & upload)
+exec_always flameshot
 
 # shadows and transitions with compton
 exec --no-startup-id compton --config ~/.config/compton.conf -b
@@ -63,7 +66,7 @@ exec_always --no-startup-id nm-applet
 exec_always --no-startup-id blueberry-tray 
 
 # enable numlock
-exec --no-startup-id numlockx on
+exec --no-startup-id numlock on
 
 # Tap to click touchpad
 exec_always --no-startup-id xinput --set-prop "ELAN1200:00 04F3:3067 Touchpad" "libinput Tapping Enabled" 1

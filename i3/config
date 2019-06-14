@@ -173,7 +173,7 @@ bindsym Escape mode "default"
 bindsym --release XF86PowerOff mode "$mode_power"
 
 # start a terminal
-bindsym $mod+Return workspace $tag2; exec urxvt
+bindsym $mod+Return workspace $tag2; exec terminator
 
 #shortcut thunar
 bindsym $mod+Shift+t exec thunar
@@ -249,12 +249,12 @@ bindsym $mod+Shift+0 move container to workspace $tag10
 
 # automatically start programs in specific workspaces on login
 exec --no-startup-id i3-msg "workspace $tag1; exec google-chrome"
-exec --no-startup-id i3-msg "workspace $tag2; exec urxvt"
+exec --no-startup-id i3-msg "workspace $tag2; exec terminator"
 exec --no-startup-id i3-msg "workspace $tag10; exec slack"
 
 # assign some applications to certain workspaces
 # assign [class="Firefox"] $tag1
-assign [class="URxvt"] $tag2
+assign [class="terminator"] $tag2
 
 # set specific apps to show as floating windows
 for_window [class="^Viewnior$"] floating enable

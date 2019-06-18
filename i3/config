@@ -85,10 +85,16 @@ exec_always libinput-gestures-setup start
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
-# volume control (increment)
-bindsym XF86AudioMute              exec amixer set Master toggle
-bindsym XF86AudioLowerVolume	   exec amixer -q set Master 5%- unmute
-bindsym XF86AudioRaiseVolume	   exec amixer -q set Master 5%+ unmute
+# volume control (increment) if using fedora
+#bindsym XF86AudioMute              exec amixer set Master toggle
+#bindsym XF86AudioLowerVolume	   exec amixer -q set Master 5%- unmute
+#bindsym XF86AudioRaiseVolume	   exec amixer -q set Master 5%+ unmute
+
+# volume control if using ubuntu family
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -159,14 +165,15 @@ bindsym $mod+a            focus parent
 # focus the child container
 #bindsym $mod+d           focus child
 
-# SHORTCUT OPEN APPS
+#set $suspend bindsym Control+$mod+s exec --no-startup-id i3lock-fancy -t "Call Your Fucking Administrator" && systemctl suspend
 
 #shortcut to power off
-set $mode_power [l]ogoff | [s]hutdown | [r]estart
+set $mode_power [l]ogoff | [s]hutdown | [r]estart | sus[p]end
 mode "$mode_power" {
 bindsym l exec i3-msg exit
 bindsym s exec systemctl poweroff -i
 bindsym r exec systemctl reboot -i 
+bindsym p exec systemctl suspend -i
 bindsym Return mode "default"
 bindsym Escape mode "default"
 }
@@ -255,10 +262,11 @@ exec --no-startup-id i3-msg "workspace $tag10; exec slack"
 # assign some applications to certain workspaces
 # assign [class="Firefox"] $tag1
 assign [class="terminator"] $tag2
+assign [class="flameshot"] $tag8
 
 # set specific apps to show as floating windows
 for_window [class="^Viewnior$"] floating enable
-#for_window [class="URxvt"] floating enable
+#for_window [class="flameshot"] floating enable
 
 
 # MOVE AND RESIZE WINDOWS
